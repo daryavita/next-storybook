@@ -28,10 +28,7 @@ export interface IconProps {
 
 function Icon({ type, width, height, color }: IconProps) {
   const className = clsx(styles.icon, {
-    [styles.white]: color === "white",
-    [styles.black]: color === "black",
-    [styles.gray]: color === "gray",
-    [styles.primary]: color === "primary",
+    [styles[`${color}`]]: color === `${color}`,
   });
 
   switch (type) {

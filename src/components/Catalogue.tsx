@@ -3,6 +3,19 @@ import LinkMod from "../UI/Link";
 import styles from "../styles/blocks/Catalogue.module.scss";
 
 function Catalogue() {
+    
+  const linkArr = [
+    { path: "/#", cildren: "НОВИНКИ" },
+    { path: "/#", cildren: "ЗДОРОВЬЕ" },
+    { path: "/#", cildren: "КРАСОТА" },
+    { path: "/#", cildren: "ЗДОРОВАЯ ЕДА" },
+    { path: "/#", cildren: "МАМАМ" },
+    { path: "/#", cildren: "ДЕТЯМ" },
+    { path: "/#", cildren: "ПИТОМЦАМ" },
+    { path: "/#", cildren: "ФИРМЕННЫЕ ТОВАРЫ" },
+    { path: "/#", cildren: "ВСЕ ТОВАРЫ" },
+  ];
+
   return (
     <nav className={styles.nav}>
       <div className={styles.column}>
@@ -11,33 +24,11 @@ function Catalogue() {
           АКЦИИ
         </LinkMod>
       </div>
-      <LinkMod path="/#" style="menu" color="black">
-        НОВИНКИ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ЗДОРОВЬЕ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        КРАСОТА
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ЗДОРОВАЯ ЕДА
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        МАМАМ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ДЕТЯМ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ПИТОМЦАМ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ФИРМЕННЫЕ ТОВАРЫ
-      </LinkMod>
-      <LinkMod path="/#" style="menu" color="black">
-        ВСЕ ТОВАРЫ
-      </LinkMod>
+      {linkArr.map((link, index) => (
+        <LinkMod key={index} path={link.path} style="menu" color="black">
+          {link.cildren}
+        </LinkMod>
+      ))}
     </nav>
   );
 }

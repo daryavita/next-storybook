@@ -7,28 +7,23 @@ interface InputProps {
   title?: string;
   icon?: "search" | "dropdown" | "password" | "calendar" | "arrow";
   placeholder: string;
+  label?: string;
   disabled?: boolean;
 }
 
-function Input({ placeholder, type, title, icon, disabled }: InputProps) {
-  const iconClass = clsx(styles.icon, {
-    [styles.search]: icon === "search",
-    [styles.dropdown]: icon === "dropdown",
-    [styles.password]: icon === "password",
-    [styles.calendar]: icon === "calendar",
-  });
+function Input({ placeholder, type, title, icon, disabled, label }: InputProps) {
 
   return (
-    <div className={styles.container}>
+    <label className={styles.container}>
+      {label && label}
       <input
         className={styles.input}
         disabled={disabled}
         placeholder={placeholder}
         type={type}
-        id="input"
       ></input>
       {icon && <Icon type={icon} width="24px" height="24px"/>}
-    </div>
+    </label>
   );
 }
 

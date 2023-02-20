@@ -21,15 +21,8 @@ function LinkMod({
   live = false,
 }: LinkProps) {
   const className = clsx(styles.link, {
-    [styles.large]: style === "large",
-    [styles.medium]: style === "medium",
-    [styles.small]: style === "small",
-    [styles.h6]: style === "h6",
-    [styles.menu]: style === "menu",
-    [styles.white]: color === "white",
-    [styles.black]: color === "black",
-    [styles.blue]: color === "blue",
-    [styles.primary]: color === "primary",
+    [styles[`${style}`]]: style === `${style}`,
+    [styles[`${color}`]]: color === `${color}`,
   });
 
   return external ? (

@@ -1,7 +1,11 @@
 import Image from "next/image";
 import styles from "../styles/UI/Avatar.module.scss"
 
-function Avatar() {
+interface AvatarProps {
+    priority?: boolean;
+}
+
+function Avatar({priority}: AvatarProps) {
     return ( 
         <Image
         src="/images/avatar.svg"
@@ -9,7 +13,7 @@ function Avatar() {
         className={styles.avatar}
         width={48}
         height={48}
-        priority
+        priority={priority}
         />
      );
 }
