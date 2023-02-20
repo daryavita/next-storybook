@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Button from '../../UI/Button';
+import {Button} from '../../UI/Button';
 
 export default {
     title: 'UI-kit/Button',

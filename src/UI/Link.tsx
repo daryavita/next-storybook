@@ -7,8 +7,9 @@ interface LinkProps {
   external?: boolean;
   children: string | any;
   disabled?: boolean;
-  style?: "large" | "medium" | "small" | "body-lg" | "h6"|"menu";
-  color?: "white" | "black" | "blue" | "primary";
+  style?: "large" | "medium" | "small" | "body-lg" | "h6" | "menu";
+  color?: "white" | "black" | "blue" | "primary" | "disabled";
+  hover?: "hover-blue" | "hover-black" | "hover-primary" | "hover-underline";
   live?: boolean;
 }
 
@@ -18,11 +19,13 @@ function LinkMod({
   children,
   style,
   color,
+  hover,
   live = false,
 }: LinkProps) {
   const className = clsx(styles.link, {
     [styles[`${style}`]]: style === `${style}`,
     [styles[`${color}`]]: color === `${color}`,
+    [styles[`${hover}`]]: hover === `${hover}`,
   });
 
   return external ? (

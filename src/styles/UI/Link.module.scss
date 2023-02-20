@@ -82,6 +82,34 @@
   color: $primary-default;
 }
 
+.disabled {
+  color: $gs-text;
+}
+
+.hover-blue {
+  &:hover {
+    @include font-style(700, 16px, 140%);
+    letter-spacing: 0.05em;
+    color: $color-link;
+    transition: 0.2s ease-out;
+  }
+}
+
+.hover-black {
+  &:hover {
+    @include font-style(400, 16px, 140%);
+    letter-spacing: 0.05em;
+    color: $black;
+    transition: 0.2s ease-out;
+  }
+}
+
+.hover-primary {
+}
+
+.hover-underline {
+}
+
 .circle {
   width: 10px;
   height: 10px;

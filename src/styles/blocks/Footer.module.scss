@@ -1,0 +1,72 @@
+@import "../base/colors";
+@import "../utils/mixins";
+
+.gray {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 318px));
+    // grid-template-columns: repeat(4, max-content);
+    gap: 24px;
+    background: $gs-bg;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.white {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 318px));
+    gap: 24px;
+    background: $white;
+    justify-content: center;
+    align-content: center;
+    padding: 24px 0;
+}
+
+.group {
+    display: grid;
+    gap: 24px;
+    grid-auto-rows: min-content;
+    padding: 80px 0;
+
+}
+
+.title {
+    @include font-style(400, 16px, 140%);
+    color: $black;
+    display: grid;
+}
+
+.nav {
+    display: grid;
+    gap: 8px;
+    grid-auto-rows: min-content;
+}
+
+.socials {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(5, 24px);
+}
+
+.grid {
+    display: grid;
+    gap: 31px;
+}
+
+.contact {
+    @include font-style(700, 16px, 140%);
+    letter-spacing: 0.05em;
+    color: $black;
+}
+
+.info {
+    @include font-style(400, 16px, 140%);
+    color: $gs-text;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    align-items: center;
+  }

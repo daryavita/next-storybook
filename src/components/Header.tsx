@@ -1,5 +1,5 @@
 import Avatar from "../UI/Avatar";
-import Button from "../UI/Button";
+import {Button} from "../UI/Button";
 import Icon from "../UI/Icon";
 import Input from "../UI/Input";
 import LinkMod from "../UI/Link";
