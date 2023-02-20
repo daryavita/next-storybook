@@ -1,0 +1,36 @@
+@import "../base/colors";
+
+.icon {
+  align-self: center;
+  cursor: pointer;
+
+  &:hover {
+    path {
+      stroke: $primary-light;
+    }
+  }
+}
+
+.white {
+  path {
+    stroke: $white;
+  }
+}
+
+.black {
+  path {
+    stroke: $black;
+  }
+}
+
+.gray {
+  path {
+    stroke: $gs-text;
+  }
+}
+
+.primary {
+  path {
+    stroke: $primary-light;
+  }
+}

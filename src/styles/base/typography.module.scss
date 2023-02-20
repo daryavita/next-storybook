@@ -1,0 +1,18 @@
+@import '../utils/mixins';
+
+.h1 {
+    @include font-style(700, 56px, 110%);
+    letter-spacing: 0.05em;
+}
+
+.body-1 {
+    @include font-style(400, 16px, 140%);
+}
+
+.large-btn {
+    @include font-style(700, 20px, 24px);
+}
+
+.placeholder {
+    @include font-style(700, 16px, 24px);
+}

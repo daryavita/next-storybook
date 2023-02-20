@@ -1,0 +1,13 @@
+@keyframes pulse {
+    0% {
+      transform: translate3d(-50%, calc(-50% + var(--offset)), 0) scale(1);
+    }
+  
+    50% {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+  
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(var(--rotate)) scale(0.9);
+    }
+  }

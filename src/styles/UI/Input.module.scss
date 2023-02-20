@@ -1,0 +1,42 @@
+@import "../utils/mixins";
+@import "../base/colors";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: 6px;
+  background: $gs-bg;
+  border: 1px solid $white;
+  border-radius: 12px;
+  min-width: 340px;
+  padding: 16px 20px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #e5e5ed;
+  }
+
+  &:focus-within {
+    border: 1px solid $primary-light;
+
+    path {
+      stroke: $primary-light;
+    }
+  }
+}
+
+.input {
+  border: none;
+  background: $gs-bg;
+  @include font-style(700, 16px, 24px);
+  color: $black;
+
+  &::placeholder {
+    @include font-style(700, 16px, 24px);
+    color: $gs-text;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

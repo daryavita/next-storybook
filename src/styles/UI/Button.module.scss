@@ -1,0 +1,64 @@
+@import "../base/colors";
+@import "../utils/mixins";
+
+.btn {
+  border-radius: 100px;
+  cursor: pointer;
+  background: none;
+}
+
+.primary {
+  background: $primary-default;
+  color: $white;
+}
+
+.secondary {
+  background: $white;
+  color: $black;
+}
+
+.green {
+  background: $green-default;
+  color: $white;
+}
+
+.purple {
+  background: $purple-default;
+  color: $white;
+}
+
+.link {
+  @include font-style(700, 16px, 140%);
+  letter-spacing: 0.05em;
+  color: $black;
+}
+
+.large {
+  width: 113px;
+  height: 64px;
+  @include font-style(700, 20px, 24px);
+}
+
+.normal {
+  width: 113px;
+  height: 56px;
+  @include font-style(700, 20px, 24px);
+}
+
+.medium {
+  width: 103px;
+  height: 48px;
+  @include font-style(700, 16px, 20px);
+}
+
+.small {
+  width: 82px;
+  height: 40px;
+  @include font-style(700, 14px, 16px);
+}
+
+.extra-small {
+  width: 82px;
+  height: 32px;
+  @include font-style(700, 14px, 16px);
+}

@@ -1,0 +1,76 @@
+@import "../base/colors";
+@import "../utils/mixins";
+
+.header {
+}
+
+.black {
+  background: $black;
+  padding: 16px 60px 11px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  gap: 9.33px;
+}
+
+.bold-text {
+  @include font-style(700, 16px, 140%);
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-light;
+    transition: 0.2s ease-out;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  gap: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 40px;
+}
+
+.lang {
+  @include two-column(5.33px);
+}
+
+.white {
+  background: $white;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 24px;
+  padding: 22px 60px 16px;
+}
+
+.column {
+  @include two-column(8px);
+  align-items: center;
+}
+
+.gap {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 62px;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 40px;
+}
+
+.stretch {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: 24px;
+}

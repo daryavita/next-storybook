@@ -1,0 +1,14 @@
+@import "../base/colors";
+@import "../utils/mixins";
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(10, max-content);
+    gap: 24px;
+    align-items: center;
+  }
+
+.column {
+    @include two-column(8px);
+    align-items: center;
+}

@@ -1,0 +1,23 @@
+// @mixin link {
+
+//     &:hover { 
+//         @include hover()
+//     } 
+//     &:active { 
+//         font-weight: 500; 
+//     }
+// }
+
+@mixin font-style($weight, $size, $height) {
+    font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $height;
+    font-size: $size;
+}
+
+@mixin two-column($gap) {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: $gap;
+}

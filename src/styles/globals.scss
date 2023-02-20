@@ -1,0 +1,85 @@
+// @import '../styles/base/fonts';
+@import '../styles/base/colors';
+
+@font-face {
+  font-family: 'ALS Schlange sans';
+  src: url('../../public/fonts/ALSSchlangesans-Bold.eot'),
+      url('../../public/fonts/ALSSchlangesans-Bold.woff2') format('woff2'),
+      url('../../public/fonts/ALSSchlangesans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALS Schlange sans';
+  src: url('../../public/fonts/ALSSchlangesans-Black.eot'),
+      url('../../public/fonts/ALSSchlangesans-Black.woff2') format('woff2'),
+      url('../../public/fonts/ALSSchlangesans-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALS Schlange sans';
+  src: url('../../public/fonts/ALSSchlangesans-Light.eot'),
+      url('../../public/fonts/ALSSchlangesans-Light.woff2') format('woff2'),
+      url('../../public/fonts/ALSSchlangesans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALS Schlange sans';
+  src: url('../../public/fonts/ALSSchlangesans-Thin.eot'),
+      url('../../public/fonts/ALSSchlangesans-Thin.woff2') format('woff2'),
+      url('../../public/fonts/ALSSchlangesans-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ALS Schlange sans';
+  src: url('../../public/fonts/ALSSchlangesans.eot'),
+      url('../../public/fonts/ALSSchlangesans.woff2') format('woff2'),
+      url('../../public/fonts/ALSSchlangesans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// html,
+// body {
+//   max-width: 100vw;
+//   overflow-x: hidden;
+//   font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif ;
+// }
+
+
+body {
+  font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  background-color: $white;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
