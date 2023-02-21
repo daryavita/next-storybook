@@ -4,7 +4,6 @@
 .gray {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 318px));
-    // grid-template-columns: repeat(4, max-content);
     gap: 24px;
     background: $gs-bg;
     justify-content: center;

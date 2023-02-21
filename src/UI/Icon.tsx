@@ -11,6 +11,7 @@ import Youtube from "../../public/images/icons/youtube.svg";
 import Telegram from "../../public/images/icons/telegram.svg";
 import Dzen from "../../public/images/icons/dzen.svg";
 import Dsa from "../../public/images/icons/dsa.svg";
+import Cross from "../../public/images/icons/cross.svg";
 import styles from "../styles/UI/Icon.module.scss";
 import clsx from "clsx";
 
@@ -31,7 +32,8 @@ export interface IconProps {
     | "youtube"
     | "telegram"
     | "dzen"
-    | "dsa";
+    | "dsa"
+    | "cross";
   width?: string;
   height?: string;
   color?: "white" | "black" | "gray" | "primary";
@@ -88,6 +90,9 @@ function Icon({ type, width, height, color, hover }: IconProps) {
       break;
     case "dsa":
       return <Dsa className={className} width={width} height={height} />;
+      break;
+    case "cross":
+      return <Cross className={className} width={width} height={height} />;
       break;
   }
 

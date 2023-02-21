@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Cookie } from '@/components/Cookie'
 
 
 export default function Home() {
@@ -9,8 +10,9 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-      <Header></Header>
+      <Header/>
       <Footer/>
+      <Cookie/>
       <main>
       </main>
     </>

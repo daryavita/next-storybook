@@ -15,11 +15,22 @@
 .secondary {
   background: $white;
   color: $black;
+  border: 1px solid $gs-border;
+
+  &:hover {
+    background: $gs-bg;
+    transition: 0.2s ease-out;
+  }
 }
 
 .green {
   background: $green-default;
   color: $white;
+
+  &:hover {
+    background: $green-light;
+    transition: 0.2s ease-out;
+  }
 }
 
 .purple {

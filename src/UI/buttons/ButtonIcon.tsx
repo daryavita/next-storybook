@@ -1,22 +1,21 @@
 import clsx from "clsx";
-import styles from "../styles/UI/Button.module.scss";
-import font from "../styles/base/typography.module.scss";
+import Icon, { IconProps } from "../Icon";
+import styles from "../../styles/UI/ButtonIcon.module.scss";
 
-interface ButtonProps {
-  variant: "primary" | "secondary" | "green" | "purple" | "honey" | "link";
+interface ButtonIconProps {
+  variant: "primary" | "secondary" | "without-bg";
   type: "button" | "submit" | "reset";
   size?: "large" | "normal" | "medium" | "small" | "extra-small";
-  children: string;
   disabled?: boolean;
-  // icon?:
+  icon: IconProps["type"];
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const ButtonIcon: React.FC<ButtonIconProps> = ({
   variant,
   type,
   size,
-  children,
+  icon,
   disabled,
 }): JSX.Element => {
   return (
@@ -28,9 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       disabled={disabled}
     >
-      {children}
+      <Icon type={icon} width="24px" height="24px"></Icon>
     </button>
   );
 };
-
-// export default Button;

@@ -1,0 +1,8 @@
+@import "../utils/mixins";
+@import "../base/colors";
+
+.without-bg {
+    border: none;
+    background: none;
+    align-self: center;
+}

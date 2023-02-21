@@ -1,7 +1,6 @@
-import Icon, { IconProps } from "@/UI/Icon";
-import LinkMod from "@/UI/Link";
+import Icon from "../UI/Icon";
+import LinkMod from "..//UI/Link";
 import styles from "../styles/blocks/Footer.module.scss";
-// import IconProps from "../UI/Icon"
 
 interface FooterProps {}
 
