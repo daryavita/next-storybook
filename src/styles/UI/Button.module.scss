@@ -10,6 +10,16 @@
 .primary {
   background: $primary-default;
   color: $white;
+
+  &:hover {
+    background: $primary-light;
+    transition: 0.2s ease-out;
+  }
+
+  &:active {
+    background: $primary-lighter;
+    transition: 0.2s ease-out;
+  }
 }
 
 .secondary {
@@ -72,4 +82,17 @@
   width: 82px;
   height: 32px;
   @include font-style(700, 14px, 16px);
+}
+
+.disabled {
+  background: $gs-bg;
+  color: $gs-text;
+
+  &:hover {
+    background: $gs-bg;
+  }
+
+  &:active {
+      background: $gs-bg;
+    }
 }

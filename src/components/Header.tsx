@@ -1,24 +1,27 @@
 import Avatar from "../UI/Avatar";
-import {Button} from "../UI/buttons/Button";
-import Icon from "../UI/Icon";
+import { Button } from "../UI/buttons/Button";
+import Icon from "../UI/icons/Icon";
 import Input from "../UI/Input";
 import LinkMod from "../UI/Link";
 import Image from "next/image";
 import styles from "../styles/blocks/Header.module.scss";
 import Catalogue from "./Catalogue";
+import { IconCount } from "../UI/icons/IconCount";
 
 interface HeaderProps {
   // user?: User;
   isLogin?: boolean;
 }
 
-function Header({ isLogin }: HeaderProps) {
+function Header({ isLogin = true }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.black}>
-        <div className={styles.container}>
-          <Icon type="map-pin" width="16px" height="16px" />
-          <p className={styles["bold-text"]}>Екатеринбург</p>
+        <div>
+          <button className={styles['location-btn']}>
+            <Icon type="map-pin" width="16px" height="16px" />
+            <span className={styles["bold-text"]}>Екатеринбург</span>
+          </button>
         </div>
         <div className={styles.grid}>
           <nav className={styles.nav}>
@@ -46,8 +49,10 @@ function Header({ isLogin }: HeaderProps) {
           </nav>
           <p className={styles["bold-text"]}>8-800-200-19-57</p>
           <div className={styles.lang}>
-            <p className={styles["bold-text"]}>RUS</p>
-            <Icon type="arrow" width="9.33px" height="5.33px" />
+            <button className={styles["lang-btn"]}>
+              <span className={styles["bold-text"]}>RUS</span>
+              <Icon type="arrow-down" width="9.33px" height="5.33px" />
+            </button>
           </div>
         </div>
       </div>
@@ -85,7 +90,12 @@ function Header({ isLogin }: HeaderProps) {
                 </LinkMod>
               </div>
               <div className={styles.column}>
-                <Icon type="shopping-cart" width="24px" height="24px" />
+                <IconCount
+                  type="shopping-cart"
+                  width="24px"
+                  height="24px"
+                  count={101}
+                />
                 <LinkMod path="/cart" style="h6" color="black">
                   Корзина
                 </LinkMod>
@@ -93,7 +103,7 @@ function Header({ isLogin }: HeaderProps) {
 
               {isLogin ? (
                 <div className={styles.column}>
-                  <Avatar />
+                  <Avatar online priority width={48} height={48} />
                   <LinkMod path="/lk" style="h6" color="blue">
                     Крохалева Анастасия
                   </LinkMod>

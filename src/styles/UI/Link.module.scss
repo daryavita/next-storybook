@@ -1,5 +1,6 @@
 @import "../utils/mixins";
 @import "../base/colors";
+@import "../base/keyframes";
 
 .link {
   cursor: pointer;
@@ -38,19 +39,6 @@
   letter-spacing: 0.05em;
 }
 
-.menu {
-  @include font-style(700, 16px, 140%);
-  letter-spacing: 0.05em;
-
-  &:hover {
-    text-decoration: underline $primary-add;
-    text-decoration-thickness: 9px;
-    text-underline-offset: -3px;
-    text-decoration-skip-ink: none;
-    // transition: 0.1s ease-out;
-  }
-}
-
 .white {
   color: $white;
 
@@ -86,30 +74,6 @@
   color: $gs-text;
 }
 
-.hover-blue {
-  &:hover {
-    @include font-style(700, 16px, 140%);
-    letter-spacing: 0.05em;
-    color: $color-link;
-    transition: 0.2s ease-out;
-  }
-}
-
-.hover-black {
-  &:hover {
-    @include font-style(400, 16px, 140%);
-    letter-spacing: 0.05em;
-    color: $black;
-    transition: 0.2s ease-out;
-  }
-}
-
-.hover-primary {
-}
-
-.hover-underline {
-}
-
 .circle {
   width: 10px;
   height: 10px;
@@ -118,14 +82,4 @@
   align-self: center;
   margin: 0 0 0 15px;
   animation: pulse 1s linear infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgb(240, 165, 0, 100%);
-  }
-
-  100% {
-    box-shadow: 0 0 0 7px rgb(240, 165, 0, 50%);
-  }
 }

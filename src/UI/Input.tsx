@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import styles from "../styles/UI/Input.module.scss";
-import Icon from "./Icon";
+import Icon, { IconProps } from "./icons/Icon";
 
 interface InputProps {
   type: "text" | "number" | "password" | "email" | "url" | "tel" | "search";
   title?: string;
-  icon?: "search" | "dropdown" | "password" | "calendar" | "arrow";
+  icon?: IconProps["type"];
   placeholder: string;
   label?: string;
   disabled?: boolean;

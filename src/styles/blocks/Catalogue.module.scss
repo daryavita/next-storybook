@@ -2,13 +2,23 @@
 @import "../utils/mixins";
 
 .nav {
-    display: grid;
-    grid-template-columns: repeat(10, max-content);
-    gap: 24px;
-    align-items: center;
-  }
+  display: grid;
+  grid-template-columns: repeat(10, max-content);
+  gap: 24px;
+  align-items: center;
+}
 
 .column {
-    @include two-column(8px);
-    align-items: center;
+  @include two-column(8px);
+  align-items: center;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline $primary-add;
+    text-decoration-thickness: 9px;
+    text-underline-offset: -3px;
+    text-decoration-skip-ink: none;
+    // transition: 0.1s ease-out;
+  }
 }

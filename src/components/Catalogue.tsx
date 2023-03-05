@@ -1,4 +1,4 @@
-import Icon from "../UI/Icon";
+import Icon from "../UI/icons/Icon";
 import LinkMod from "../UI/Link";
 import styles from "../styles/blocks/Catalogue.module.scss";
 
@@ -25,7 +25,7 @@ function Catalogue() {
         </LinkMod>
       </div>
       {linkArr.map((link, index) => (
-        <LinkMod key={index} path={link.path} style="menu" color="black">
+        <LinkMod key={index} path={link.path} style="h6" color="black" className={styles['hover-underline']}>
           {link.cildren}
         </LinkMod>
       ))}

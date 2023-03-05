@@ -9,7 +9,7 @@ interface LinkProps {
   disabled?: boolean;
   style?: "large" | "medium" | "small" | "body-lg" | "h6" | "menu";
   color?: "white" | "black" | "blue" | "primary" | "disabled";
-  hover?: "hover-blue" | "hover-black" | "hover-primary" | "hover-underline";
+  className?: string;
   live?: boolean;
 }
 
@@ -19,26 +19,25 @@ function LinkMod({
   children,
   style,
   color,
-  hover,
   live = false,
+  className,
 }: LinkProps) {
-  const className = clsx(styles.link, {
+  const styleСlass = clsx(styles.link, className, {
     [styles[`${style}`]]: style === `${style}`,
     [styles[`${color}`]]: color === `${color}`,
-    [styles[`${hover}`]]: hover === `${hover}`,
   });
 
   return external ? (
     <a
       href={path}
-      className={className}
+      className={styleСlass}
       target="_blank"
       rel="noopener noreferrer"
     >
       {children}
     </a>
   ) : (
-    <Link href={path} className={className}>
+    <Link href={path} className={styleСlass}>
       {children}
       {live && <div className={styles.circle}></div>}
     </Link>

@@ -55,14 +55,6 @@
   margin: 0;
 }
 
-// html,
-// body {
-//   max-width: 100vw;
-//   overflow-x: hidden;
-//   font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif ;
-// }
-
-
 body {
   font-family: 'ALS Schlange sans', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -81,5 +73,6 @@ a {
 
 button {
   border: none;
+  background: none;
 }
 

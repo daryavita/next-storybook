@@ -1,17 +1,9 @@
 import React, { Children } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Icon, { IconProps } from '../../UI/Icon';
-
-
-const iconComponents = [
-    'search',
-    'map-pin',
-    'arrow',
-];
-  
+import Icon, { IconProps } from '../../UI/icons/Icon';
 
 export default {
-    title: 'UI-kit/Icon',
+    title: 'UI-kit/icons/Icon',
     component: Icon,
   } as ComponentMeta<typeof Icon>;
 
@@ -19,13 +11,3 @@ export default {
 
   export const Icons = Template.bind({});
   Icons.args = { type:'search'};
-  Icons.args = { type:'map-pin'};
-
-//   export const MapPin = Template.bind({});
-//   MapPin.args = { type:'map-pin'};
-
-// export const BaseStory = (args: IconProps) => (
-//     <>
-//       <Search {...args} />
-//     </>
-//   );

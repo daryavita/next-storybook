@@ -1,3 +1,21 @@
+@import "../base/colors";
+
+.container {
+    display: flex;
+    position: relative;
+}
+
 .avatar {
     border-radius: 50%;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background: $primary-default;
+    border-radius: 50%;
+    border: 3px solid $white;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }

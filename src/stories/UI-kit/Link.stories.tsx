@@ -13,4 +13,4 @@ export default {
   Base.args = {style:'large', color:'black', children:'Link' };
 
   export const Body = Template.bind({});
-  Body.args = {style:'body-lg', color:'white', children:'Link' };
+  Body.args = {style:'body-lg', color:'black', children:'Link' };

@@ -1,11 +1,11 @@
-import { Button } from "@/UI/buttons/Button";
-import { ButtonIcon } from "@/UI/buttons/ButtonIcon";
-import LinkMod from "@/UI/Link";
+import { Button } from "../UI/buttons/Button";
+import { ButtonIcon } from "../UI/buttons/ButtonIcon";
+import LinkMod from "../UI/Link";
 import styles from "../styles/blocks/Cookie.module.scss";
 
-export const Cookie = () => {
+export const Cookie: React.FC = (): JSX.Element => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <p className={styles.text}>
         Этот сайт использует cookie -файлы и другие технологии, чтобы помочь вам
         в навигации, а также предоставить лучший пользовательский опыт,
@@ -16,7 +16,7 @@ export const Cookie = () => {
       <Button variant="green" size="medium" type="submit">Принять</Button>
       <Button variant="secondary" size="medium" type="button">Отклонить</Button>
       </div>
-      <ButtonIcon icon="cross" variant="without-bg" type="button"></ButtonIcon>
-    </div>
+      <ButtonIcon icon="cross" variant="without-bg" type="button" width="24px" height="24px"></ButtonIcon>
+    </section>
   );
 };

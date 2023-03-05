@@ -1,5 +1,24 @@
 import '../src/styles/globals.scss'
 import * as NextImage from "next/image";
+import { addParameters } from "@storybook/react";
+
+addParameters({
+  docs: {
+    inlineStories: true,
+    iframeHeight: "60px",
+  },
+  html: {
+    head: {
+      links: [
+        {
+          rel: "stylesheet",
+          href: "preview-head.html",
+        },
+      ],
+    },
+  },
+});
+
 
 const OriginalNextImage = NextImage.default;
 

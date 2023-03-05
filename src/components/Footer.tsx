@@ -1,4 +1,4 @@
-import Icon from "../UI/Icon";
+import Icon from "../UI/icons/Icon";
 import LinkMod from "..//UI/Link";
 import styles from "../styles/blocks/Footer.module.scss";
 
@@ -66,12 +66,12 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
           <nav className={styles.nav}>
             {groupOne?.map((item, index) => (
               <LinkMod
+                className={styles["hover-blue"]}
                 key={index}
                 path={item.path}
                 style="body-lg"
                 color="black"
                 external={item.external}
-                hover="hover-blue"
               >
                 {item.children}
               </LinkMod>
@@ -83,12 +83,12 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
           <nav className={styles.nav}>
             {groupTwo?.map((item, index) => (
               <LinkMod
+                className={styles["hover-blue"]}
                 key={index}
                 path={item.path}
                 style="body-lg"
                 color="black"
                 external={item.external}
-                hover="hover-blue"
               >
                 {item.children}
               </LinkMod>
@@ -100,11 +100,11 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
           <nav className={styles.nav}>
             {groupThree?.map((item, index) => (
               <LinkMod
+                className={styles["hover-blue"]}
                 key={index}
                 path={item.path}
                 style="body-lg"
                 color="black"
-                hover="hover-blue"
               >
                 {item.children}
               </LinkMod>
@@ -116,12 +116,13 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
           <nav className={styles.socials}>
             {groupFour?.map((item: any, index: number) => (
               <LinkMod
+                className={styles["hover-blue"]}
                 key={index}
                 path={item.path}
                 external={item.external}
-                hover="hover-blue"
               >
                 <Icon
+                  className={styles['hover-icon']}
                   type={item.type}
                   width="24px"
                   height="24px"
@@ -145,10 +146,20 @@ export const Footer: React.FC<FooterProps> = (): JSX.Element => {
       </div>
       <div className={styles.white}>
         <p className={styles.info}>&#169; ТЕНТОРИУМ&#174; 2011-2022</p>
-        <LinkMod path="/#" style="body-lg" color="disabled" hover="hover-black">
+        <LinkMod
+          path="/#"
+          style="body-lg"
+          color="disabled"
+          className={styles["hover-black"]}
+        >
           Обработка персональных данных
         </LinkMod>
-        <LinkMod path="/#" style="body-lg" color="disabled" hover="hover-black">
+        <LinkMod
+          path="/#"
+          style="body-lg"
+          color="disabled"
+          className={styles["hover-black"]}
+        >
           Публичная оферта
         </LinkMod>
         <div className={styles.column}>

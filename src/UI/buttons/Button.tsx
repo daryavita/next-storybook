@@ -23,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={clsx(styles.btn, {
         [styles[`${variant}`]]: variant === `${variant}`,
         [styles[`${size}`]]: size === `${size}`,
+        [styles.disabled]: disabled === true,
       })}
       type={type}
       disabled={disabled}

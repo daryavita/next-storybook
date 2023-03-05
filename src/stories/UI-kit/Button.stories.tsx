@@ -9,5 +9,8 @@ export default {
 
   const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-  export const Primary = Template.bind({});
-  Primary.args = { variant:'primary', children:'Label', type:'button', size:'large' };
+  export const Base = Template.bind({});
+  Base.args = { variant:'primary', children:'Label', type:'button', size:'large' };
+
+  export const ButtonIcon = Template.bind({});
+  Base.args = { variant:'primary', children:'Label', type:'button', size:'large' };

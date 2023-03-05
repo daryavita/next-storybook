@@ -11,10 +11,21 @@
   justify-content: space-between;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, min-content);
-  gap: 9.33px;
+.location-btn {
+  @include two-column(9.33px);
+  &:hover {
+    cursor: pointer;
+
+    span {
+      color: $primary-light;
+      transition: 0.2s ease-out;
+    }
+
+    path {
+      fill: $primary-default;
+      transition: 0.2s ease-out;
+    }
+  }
 }
 
 .bold-text {
@@ -41,7 +52,23 @@
 }
 
 .lang {
+}
+
+.lang-btn {
   @include two-column(5.33px);
+  &:hover {
+    cursor: pointer;
+
+    span {
+      color: $primary-light;
+      transition: 0.2s ease-out;
+    }
+
+    path {
+      fill: $primary-default;
+      transition: 0.2s ease-out;
+    }
+  }
 }
 
 .white {
@@ -74,3 +101,12 @@
   grid-template-columns: 1fr min-content;
   gap: 24px;
 }
+
+// .hover-primary {
+//   &:hover {
+//     path {
+//       stroke: $primary-default;
+//       transition: 0.2s ease-out;
+//     }
+//   }
+// }

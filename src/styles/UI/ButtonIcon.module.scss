@@ -1,8 +1,102 @@
 @import "../utils/mixins";
 @import "../base/colors";
 
+.btn {
+  border-radius: 100px;
+  cursor: pointer;
+  background: none;
+}
+
 .without-bg {
-    border: none;
-    background: none;
-    align-self: center;
+  border: none;
+  background: none;
+  align-self: center;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.primary {
+  background: $white;
+  box-shadow: -5px 8px 16px rgba(138, 136, 148, 0.12);
+
+  &:hover {
+    background: $gs-bg;
+    box-shadow: none;
+    transition: 0.2s ease-out;
+  }
+
+  &:active {
+    background: $white;
+    box-shadow: none;
+  }
+}
+
+.secondary {
+  background: $gs-bg;
+}
+
+.large {
+  width: 64px;
+  height: 64px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.normal {
+  width: 56px;
+  height: 56px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.medium {
+  width: 48px;
+  height: 48px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.small {
+  width: 40px;
+  height: 40px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.extra-small {
+  width: 32px;
+  height: 32px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.disabled {
+  background: $gs-bg;
+  opacity: 0.5;
+  box-shadow: none;
+
+  &:hover {
+    background: $gs-bg;
+  }
+
+  &:active {
+    background: $gs-bg;
+  }
 }

@@ -1,13 +1,9 @@
 @keyframes pulse {
     0% {
-      transform: translate3d(-50%, calc(-50% + var(--offset)), 0) scale(1);
-    }
-  
-    50% {
-      transform: translate3d(-50%, -50%, 0) scale(1);
+      box-shadow: 0 0 0 0px rgb(240, 165, 0, 100%);
     }
   
     100% {
-      transform: translate3d(-50%, -50%, 0) rotate(var(--rotate)) scale(0.9);
+      box-shadow: 0 0 0 7px rgb(240, 165, 0, 50%);
     }
   }
